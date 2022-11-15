@@ -1,4 +1,4 @@
-package com.ramanie.crypto.ui.theme
+package com.ramanie.crypto.presentation.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes

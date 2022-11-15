@@ -1,4 +1,4 @@
-package com.ramanie.crypto.ui.theme
+package com.ramanie.crypto.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
