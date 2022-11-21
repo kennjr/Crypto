@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ramanie.crypto.common.Constants
 import com.ramanie.crypto.common.Resource
-import com.ramanie.crypto.common.Tag
 import com.ramanie.crypto.domain.use_cases.get_coin.GetCoinInfoUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
@@ -60,12 +59,12 @@ class CoinInfoViewModel @Inject constructor(
 //                    _state.value = CoinsState(isLoading = true)
                 }
                 is Resource.Success -> {
-                    state = state.copy(coinInfo = result.data )
+                    state = state.copy(coinInfo = result.data, isLoading = false, error = null)
                     // this is the other way of updating the value
 //                    _state.value = CoinsState(error = result.data ?: emptyList()
                 }
                 is Resource.Error -> {
-                    state = state.copy(error = result.error)
+                    state = state.copy(error = result.error, isLoading = false)
                     // this is the other way of updating the value
 //                    _state.value = CoinsState(error = result.error)
                 }
