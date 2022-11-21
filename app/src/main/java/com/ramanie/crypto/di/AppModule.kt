@@ -3,6 +3,7 @@ package com.ramanie.crypto.di
 import com.ramanie.crypto.common.Constants
 import com.ramanie.crypto.data.remote.CoinPaprikaAPI
 import com.ramanie.crypto.data.repository.CoinRepoImpl
+import com.ramanie.crypto.domain.repository.CoinRepo
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -32,7 +33,7 @@ object AppModule {
     @Provides
     // this is added bc we'll need only one instance of this dependency
     @Singleton
-    fun provideCoinRepo(api: CoinPaprikaAPI): CoinRepoImpl{
+    fun provideCoinRepo(api: CoinPaprikaAPI): CoinRepo {
         // this one's easy simply bc dagger already knows how to create an instance of the API we'll
         // just pass the API as a param and then pass it as an argument in the return statement
         return CoinRepoImpl(api)
