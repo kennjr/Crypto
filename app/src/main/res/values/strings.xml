@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Crypto</string>
+    <string name="active">Active</string>
+    <string name="in_active">Inactive</string>
+
+    <!--  Request error msgs  -->
+    <string name="unable_to_communicate_with_server">Unable to communicate with server.\nCheck your internet connection</string>
+    <string name="unexpected_error">Unexpected error.\nError : %s</string>
+    <string name="unexpected_server_response">Unexpected server response.\nResponse : %s</string>
+
+    <string name="unavailable">Unavailable</string>
+    <string name="tags">Tags</string>
+    <string name="team_members">Team members</string>
+
 </resources>
