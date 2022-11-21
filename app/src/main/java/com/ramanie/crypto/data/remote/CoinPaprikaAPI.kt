@@ -13,6 +13,6 @@ interface CoinPaprikaAPI {
     // the parsing(converting from json to data class) will be done(automatically) by a g-son
     suspend fun getCoins(): List<CoinDto>
 
-    @GET("/v1/coin/{coinId}")
+    @GET("/v1/coins/{coinId}")
     suspend fun getCoinData(@Path("coinId") coinId: String): CoinInfoDto
 }
