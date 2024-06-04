@@ -6,13 +6,13 @@ import com.ramanie.crypto.common.*
 data class CoinInfoDto(
     val description: String,
     @SerializedName("development_status")
-    val developmentStatus: String,
+    val developmentStatus: String?,
     @SerializedName("first_data_at")
     val firstDataAt: String,
     @SerializedName("hardware_wallet")
     val hardwareWallet: Boolean,
     @SerializedName("hash_algorithm")
-    val hashAlgorithm: String,
+    val hashAlgorithm: String?,
     val id: String,
     @SerializedName("is_active")
     val isActive: Boolean,
@@ -24,20 +24,20 @@ data class CoinInfoDto(
     @SerializedName("links_extended")
     val linksExtended: List<LinksExtended>,
     val logo: String,
-    val message: String,
+    val message: String?,
     val name: String,
     @SerializedName("open_source")
     val openSource: Boolean,
     @SerializedName("org_structure")
-    val orgStructure: String,
+    val orgStructure: String?,
     @SerializedName("proof_type")
-    val proofType: String,
+    val proofType: String?,
     val rank: Int,
     @SerializedName("started_at")
-    val startedAt: String,
+    val startedAt: String?,
     val symbol: String,
     val tags: List<Tag>,
     val team: List<Team>,
-    val type: String,
-    val whitepaper: Whitepaper
+    val type: String?,
+    val whitepaper: Whitepaper?
 )
